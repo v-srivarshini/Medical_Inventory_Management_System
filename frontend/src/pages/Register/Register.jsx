@@ -75,7 +75,7 @@ async function handleSubmit(e) {
       }
     );
 
-    alert("Registration Successful");
+    
 
     navigate("/login");
 
