@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../Medicines/Medicines.css";
 import "./Notifications.css";
-import "./Notifications.css";
+
 import { FaTrash, FaEnvelopeOpen } from "react-icons/fa";
 
 import {
