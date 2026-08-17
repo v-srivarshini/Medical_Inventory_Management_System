@@ -41,7 +41,7 @@ const Medicines = () => {
         try {
             const token = localStorage.getItem("token");
             const response = await axios.get(
-                "http://localhost:8080/api/medicines",
+                `${import.meta.env.VITE_API_URL}/api/medicines`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -59,7 +59,7 @@ const Medicines = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://localhost:8080/api/suppliers",
+                `${import.meta.env.VITE_API_URL}/api/suppliers`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -95,8 +95,8 @@ const Medicines = () => {
 
             const url =
                 keyword.trim() === ""
-                    ? "http://localhost:8080/api/medicines"
-                    : `http://localhost:8080/api/medicines/search?keyword=${keyword}`;
+                    ? `${import.meta.env.VITE_API_URL}/api/medicines`
+                    : `${import.meta.env.VITE_API_URL}/api/medicines/search?keyword=${keyword}`;
 
             const response = await axios.get(url, {
                 headers: {
@@ -117,7 +117,7 @@ const Medicines = () => {
             if (selectedMedicine) {
                 // UPDATE
                 await axios.put(
-                    `http://localhost:8080/api/medicines/${selectedMedicine.medicineId}`,
+                    `${import.meta.env.VITE_API_URL}/api/medicines/${selectedMedicine.medicineId}`,
                     formData,
                     {
                         headers: {
@@ -135,7 +135,7 @@ const Medicines = () => {
             } else {
                 // ADD
                 await axios.post(
-                    "http://localhost:8080/api/medicines",
+                    `${import.meta.env.VITE_API_URL}/api/medicines`,
                     formData,
                     {
                         headers: {
@@ -179,7 +179,7 @@ const Medicines = () => {
         try {
             const token = localStorage.getItem("token");
             await axios.delete(
-                `http://localhost:8080/api/medicines/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/medicines/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
