@@ -8,7 +8,7 @@ import {
     getNotifications,
     markAsRead,
     deleteNotification
-} from "../../services/notificationService";
+} from "../../services/NotificationService";
 
 const getTypeClass = (type = "") => type.toLowerCase();
 
