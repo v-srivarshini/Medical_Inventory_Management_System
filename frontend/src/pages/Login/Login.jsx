@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Eye, EyeOff, LogIn } from "lucide-react";
 import AuthLayout from "./AuthLayout";
-import "./login.css";
+import "./Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import GoogleLoginButton from "../../components/GoogleLoginButton";
