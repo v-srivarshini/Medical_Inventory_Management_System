@@ -47,7 +47,7 @@ const Inventory = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://localhost:8080/api/inventory",
+                `${import.meta.env.VITE_API_URL}/api/inventory`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
