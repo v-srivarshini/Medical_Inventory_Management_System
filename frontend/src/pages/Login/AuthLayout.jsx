@@ -1,4 +1,4 @@
-import "./login.css";
+import "./Login.css";
 
 /**
  * Shared split-screen shell for Login / Register.
