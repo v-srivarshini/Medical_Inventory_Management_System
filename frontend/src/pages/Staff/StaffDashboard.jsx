@@ -23,8 +23,8 @@ import "./StaffDashboard.css";
 const DEFAULT_STATE = {
   inventory: 0,
   suppliers: 0,
-  purchaseOrders: 0,
-  stockAvailable: 0,
+  purchaseOrders: 10,
+  stockAvailable: 944,
   lowStock: 0,
   expiryAlerts: 0,
 
@@ -358,7 +358,7 @@ function StaffDashboard() {
 
 
           <DashboardCard
-            title="Purchase Orders"
+            title="Medicines"
             value={dashboardData.purchaseOrders ?? 0}
             icon={<FaShoppingCart />}
           />
