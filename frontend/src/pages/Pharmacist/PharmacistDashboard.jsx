@@ -77,7 +77,16 @@ function PharmacistDashboard() {
 
         const response = await getDashboardData(token, "PHARMACIST", userId);
 
-        setDashboardData((prev) => ({ ...prev, ...response.data }));
+const data = response.data;
+
+setDashboardData((prev) => ({
+  ...prev,
+  ...data,
+  availableMedicines: data.totalMedicines ?? prev.availableMedicines,
+  stockAvailable: data.totalInventory ?? prev.stockAvailable,
+  lowStock: data.lowStock ?? prev.lowStock,
+  expiryAlerts: data.expiringSoon ?? prev.expiryAlerts,
+}));
 
       } catch (error) {
 
