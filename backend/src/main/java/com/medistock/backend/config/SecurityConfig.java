@@ -45,9 +45,11 @@ public class SecurityConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(List.of("medical-inventory-management-system-six.vercel.app"));
-        configuration.setAllowedOrigins(List.of("medical-inventory-git-b12f1a-srivarshinivuchuru-1364s-projects.vercel.app"));
-        configuration.setAllowedOrigins(List.of("medical-inventory-management-system-7gd4wveaf.vercel.app"));
+        configuration.setAllowedOrigins(List.of(
+            "https://medical-inventory-management-system-six.vercel.app",
+        "https://medical-inventory-git-b12f1a-srivarshinivuchuru-1364s-projects.vercel.app",
+       "https://medical-inventory-management-system-7gd4wveaf.vercel.app"
+        ));
         configuration.setAllowedMethods(List.of("*"));
         configuration.setAllowedHeaders(List.of("*"));
 
