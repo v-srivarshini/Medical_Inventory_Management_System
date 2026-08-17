@@ -24,12 +24,12 @@ const DEFAULT_STATE = {
   inventory: 0,
   suppliers: 0,
   purchaseOrders: 10,
-  stockAvailable: 944,
+  stockAvailable: 0,
   lowStock: 0,
   expiryAlerts: 0,
 
   // Values used by the KPI cards
-  stockLogs: 0,
+  stockLogs: 944,
   lowStockAlerts: 0,
 
   medicines: [
