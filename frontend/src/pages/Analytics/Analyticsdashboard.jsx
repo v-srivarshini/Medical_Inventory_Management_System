@@ -33,7 +33,7 @@ import {
   FaUserTag
 } from "react-icons/fa";
 
-import "./AnalyticsDashboard.css";
+import "./Analyticsdashboard.css";
 
 /* ================= Fallback sample data =================
    Populates every module from day one; gets replaced field
