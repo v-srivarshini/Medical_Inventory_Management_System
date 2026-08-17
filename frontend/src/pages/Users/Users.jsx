@@ -59,7 +59,7 @@ const Users = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:8080/api/users",
+        `${import.meta.env.VITE_API_URL}/api/users`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -146,7 +146,7 @@ const Users = () => {
     try {
 
       await axios.delete(
-        `http://localhost:8080/api/users/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/users/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
