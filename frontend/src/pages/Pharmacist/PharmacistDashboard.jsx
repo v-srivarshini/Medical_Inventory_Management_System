@@ -19,8 +19,8 @@ import "./PharmacistDashboard.css";
 /* ---------------- Fallback sample data ---------------- */
 
 const DEFAULT_STATE = {
-  availableMedicines: 0,
-  stockAvailable: 0,
+  availableMedicines: 10,
+  stockAvailable: 944,
   lowStock: 0,
   expiryAlerts: 0,
   notifications: 0,
@@ -77,16 +77,7 @@ function PharmacistDashboard() {
 
         const response = await getDashboardData(token, "PHARMACIST", userId);
 
-const data = response.data;
-
-setDashboardData((prev) => ({
-  ...prev,
-  ...data,
-  availableMedicines: data.totalMedicines ?? prev.availableMedicines,
-  stockAvailable: data.totalInventory ?? prev.stockAvailable,
-  lowStock: data.lowStock ?? prev.lowStock,
-  expiryAlerts: data.expiringSoon ?? prev.expiryAlerts,
-}));
+        setDashboardData((prev) => ({ ...prev, ...response.data }));
 
       } catch (error) {
 
