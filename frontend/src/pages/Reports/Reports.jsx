@@ -64,7 +64,7 @@ const Reports = () => {
 
             const response = await axios.get(
 
-                "http://localhost:8080/api/reports",
+                `${import.meta.env.VITE_API_URL}/api/reports`,
 
                 {
 
@@ -180,7 +180,7 @@ const Reports = () => {
 
             await axios.delete(
 
-                `http://localhost:8080/api/reports/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/reports/${id}`,
 
                 {
 
@@ -242,25 +242,25 @@ const Reports = () => {
 
                 case "INVENTORY":
 
-                    url = `http://localhost:8080/api/reports/inventory/${userId}`;
+                    url = `${import.meta.env.VITE_API_URL}/api/reports/inventory/${userId}`;
 
                     break;
 
                 case "PURCHASE":
 
-                    url = `http://localhost:8080/api/reports/purchase/${userId}`;
+                    url = `${import.meta.env.VITE_API_URL}/api/reports/purchase/${userId}`;
 
                     break;
 
                 case "SUPPLIER":
 
-                    url = `http://localhost:8080/api/reports/supplier/${userId}`;
+                    url = `${import.meta.env.VITE_API_URL}/api/reports/supplier/${userId}`;
 
                     break;
 
                 case "LOW_STOCK":
 
-                    url = `http://localhost:8080/api/reports/low-stock/${userId}`;
+                    url = `${import.meta.env.VITE_API_URL}/api/reports/low-stock/${userId}`;
 
                     break;
 
