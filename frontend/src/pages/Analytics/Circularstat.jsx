@@ -1,4 +1,4 @@
-import "./CircularStat.css";
+import "./Circularstat.css";
 
 /**
  * A single circular-progress stat ring.
