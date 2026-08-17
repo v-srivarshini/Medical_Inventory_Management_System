@@ -53,7 +53,7 @@ export default function ChatBot() {
             console.log("Sending chatbot request...");
 
             const response = await axios.post(
-                "http://localhost:8080/api/chatbot",
+                `${import.meta.env.VITE_API_URL}/api/chatbot`,
                 {
                     message: question
                 },
