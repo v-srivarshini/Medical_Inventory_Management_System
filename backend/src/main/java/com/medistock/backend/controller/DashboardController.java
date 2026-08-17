@@ -143,17 +143,17 @@ public class DashboardController {
      */
     @GetMapping
     public Map<String, Object> getDashboardData(
-            @RequestParam(defaultValue = "ADMIN") String role,
+            @RequestParam(defaultValue = "Admin") String role,
             @RequestParam(required = false) Integer userId) {
 
-        String normalized = role == null ? "ADMIN" : role.trim().toUpperCase();
+        String normalized = role == null ? "Admin" : role.trim().toUpperCase();
 
         switch (normalized) {
-            case "PHARMACIST":
+            case "Pharmacist":
                 return roleDashboardService.getPharmacistDashboard(userId);
-            case "STAFF":
+            case "Staff":
                 return roleDashboardService.getStaffDashboard();
-            case "ADMIN":
+            case "Admin":
             default:
                 return roleDashboardService.getAdminDashboard();
         }
