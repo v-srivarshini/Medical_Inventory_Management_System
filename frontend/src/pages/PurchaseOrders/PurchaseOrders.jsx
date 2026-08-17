@@ -48,7 +48,7 @@ const PurchaseOrders = () => {
         try {
 
             const response = await axios.get(
-                "http://localhost:8080/api/purchase-orders",
+                `${import.meta.env.VITE_API_URL}/api/purchase-orders`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -73,7 +73,7 @@ const PurchaseOrders = () => {
         try {
 
             const response = await axios.get(
-                "http://localhost:8080/api/medicines",
+                `${import.meta.env.VITE_API_URL}/api/medicines`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -93,7 +93,7 @@ const PurchaseOrders = () => {
         try {
 
             const response = await axios.get(
-                "http://localhost:8080/api/suppliers",
+                `${import.meta.env.VITE_API_URL}/api/suppliers`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -185,7 +185,7 @@ const PurchaseOrders = () => {
             if (selectedOrder) {
 
                 await axios.put(
-                    `http://localhost:8080/api/purchase-orders/${selectedOrder.purchaseId}`,
+                    `${import.meta.env.VITE_API_URL}/api/purchase-orders/${selectedOrder.purchaseId}`,
                     payload,
                     {
                         headers: {
@@ -203,7 +203,7 @@ const PurchaseOrders = () => {
             } else {
 
                 await axios.post(
-                    "http://localhost:8080/api/purchase-orders",
+                    `${import.meta.env.VITE_API_URL}/api/purchase-orders`,
                     payload,
                     {
                         headers: {
@@ -281,7 +281,7 @@ const PurchaseOrders = () => {
         try {
 
             await axios.delete(
-                `http://localhost:8080/api/purchase-orders/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/purchase-orders/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
