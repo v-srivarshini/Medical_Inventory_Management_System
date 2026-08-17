@@ -1,6 +1,6 @@
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
-import CircularStat from "./CircularStat";
+import CircularStat from "./Circularstat";
 import { useEffect, useState } from "react";
 import { getAnalyticsData } from "../../services/authService";
 
