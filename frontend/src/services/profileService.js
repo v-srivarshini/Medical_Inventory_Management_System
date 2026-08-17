@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:8080/api/profile";
+const API = `${import.meta.env.VITE_API_URL}/api/profile`;
 
 const authHeader = () => ({
   headers: {

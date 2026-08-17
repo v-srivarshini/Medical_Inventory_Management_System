@@ -630,7 +630,7 @@ const Users = () => {
 
                         await axios.put(
 
-                          `http://localhost:8080/api/users/${selectedUser.userId}`,
+                          `${import.meta.env.VITE_API_URL}/api/users/${selectedUser.userId}`,
 
                           formData,
 

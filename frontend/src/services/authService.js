@@ -2,12 +2,12 @@ import axios from "axios";
 
 // Public APIs
 const AUTH_API = axios.create({
-    baseURL: "http://localhost:8080/api/auth",
+    baseURL: `${import.meta.env.VITE_API_URL}/api/auth`,
 });
 
 // Protected APIs
 const PROTECTED_API = axios.create({
-    baseURL: "http://localhost:8080/api",
+    baseURL: `${import.meta.env.VITE_API_URL}/api`,
 });
 
 export const registerUser = (userData) => {
