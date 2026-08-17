@@ -62,7 +62,7 @@ const Suppliers = () => {
             const token = localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://localhost:8080/api/suppliers",
+                `${import.meta.env.VITE_API_URL}/api/suppliers`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -120,8 +120,8 @@ const Suppliers = () => {
 
             const url =
                 keyword.trim() === ""
-                    ? "http://localhost:8080/api/suppliers"
-                    : `http://localhost:8080/api/suppliers/search?keyword=${encodeURIComponent(keyword)}`;
+                    ? `${import.meta.env.VITE_API_URL}/api/suppliers`
+                    : `${import.meta.env.VITE_API_URL}/api/suppliers/search?keyword=${encodeURIComponent(keyword)}`;
 
             const response = await axios.get(url, {
                 headers: {
@@ -183,7 +183,7 @@ const Suppliers = () => {
             if (selectedSupplier) {
 
                 await axios.put(
-                    `http://localhost:8080/api/suppliers/${selectedSupplier.supplierId}`,
+                    `${import.meta.env.VITE_API_URL}/api/suppliers/${selectedSupplier.supplierId}`,
                     formData,
                     {
                         headers: {
@@ -208,7 +208,7 @@ const Suppliers = () => {
             else {
 
                 await axios.post(
-                    "http://localhost:8080/api/suppliers",
+                    `${import.meta.env.VITE_API_URL}/api/suppliers`,
                     formData,
                     {
                         headers: {
@@ -295,7 +295,7 @@ const Suppliers = () => {
             const token = localStorage.getItem("token");
 
             await axios.delete(
-                `http://localhost:8080/api/suppliers/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/suppliers/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
